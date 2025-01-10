@@ -82,6 +82,7 @@
     }
     .blur {
         backdrop-filter: blur(2px);
+        height: 100vh;
     }
     .left h1 {
         font-size: 7vw;
