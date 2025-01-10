@@ -4,6 +4,7 @@ import {Link} from 'react-scroll'
 import ChangeLanguage from '../changeLanguage/changeLanguage';
 import Login from '../../assets/login.svg'
 import Hamburger from '../../assets/hamburgerMenu.svg'
+import HamburgerScrolled from '../../assets/hamburgerScrolled.svg'
 import Login1 from '../../assets/loginIcon1.svg'
 
 function Navbar() {
@@ -35,8 +36,12 @@ function Navbar() {
   return (
     <div>
       {isMobile ? (
-        <div className={styles.mobileNav}>
-          <img src={Hamburger} className={styles.hamburger} />
+        <div className={`${styles.mobileNav} ${scrolling ? styles.navbarScrolled : ""}`}>
+          {scrolling ? (
+              <img src={HamburgerScrolled} className={styles.hamburger} />
+          ): (
+            <img src={Hamburger} className={styles.hamburger} />
+          )}
           <h1 className={`${styles.logo} ${scrolling ? styles.logoColored : ""}`}>Dvise</h1>
           <div className={styles.mobileNavItems}>
             <ChangeLanguage/>

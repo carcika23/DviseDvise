@@ -126,4 +126,10 @@
     .currency-flag-main {
         border: 1.5px solid white;
     }
+    .navbar-scrolled {
+        box-shadow: none;
+    }
+    .navbar-scrolled .currency-flag-main {
+        border: 1.5px solid #264653;
+    }
 }
