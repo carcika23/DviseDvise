@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.packagesDiv {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255,255,255);
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 18%;
+    font-size: 2vw;
+    color: #264653;
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    top: 10%;
+}
+.underline {
+    position: relative;
+    top: 10%;
+    width: 8%;
+}
+/* Container for the pricing cards */
+.pricingContainer {
+    position: relative;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  /* Pricing card styles */
+  .pricingCard {
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  /* Plan title */
+  .planTitle {
+    position: relative;
+    bottom: 3%;
+    font-size: 1.5rem;
+    color: #343434;
+    font-family: "Roboto", serif;
+    font-weight: 600;
+    font-style: normal; 
+    transition: 0.5s;
+  }
+  
+  /* Plan price */
+  .planPrice {
+    font-size: 18px;
+    color: #949494;
+    position: relative;
+    bottom: 3%;
+    font-family: "Roboto Mono", serif;
+    font-style: normal; 
+    font-weight: 400;
+  }
+  
+  /* Plan items */
+  .planItems {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .planItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #343434;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal; 
+  }
+  
+  .grayText {
+    color: #bbb;
+  }
+  
+  /* Checkmark icon */
+  .checkIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  
+  /* Purchase button */
+  
+  .purchaseButton {
+    margin-top: 15px;
+    background: #f5f5f5; /* Default solid color */
+    color: #B2B2B2;
+    width: 70%;
+    height: 5.5vh;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s ease;
+  }
+  
+  .pricingCard:hover .purchaseButton {
+    color: #fff; /* Text color change */
+  }
+  
+  /* Purchase button pseudo-element for smooth animation of the gradient */
+  .purchaseButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #51a2c2, #F4A261);
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left;
+    transition: 0.5s ease; /* Transition for gradient animation */
+    z-index: -1;
+  }
+  
+  /* Expanding gradient when hovering over the button */
+  .pricingCard:hover .purchaseButton::before {
+    transform: scaleX(1); /* Expands the gradient on hover */
+  }
+  .purchaseButton:hover {
+    transform: scale(1.025);
+  }
+  .pricingCard:hover {
+    box-shadow: 0px 0px 10px #F4A261;
+  }
+  .pricingCard:hover .planTitle {
+    color: #F4A261;
+  }
