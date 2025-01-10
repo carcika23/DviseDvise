@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './services.module.css'
 import Underline from '../../assets/underline.svg'
 import ServicesImg from '../../assets/servicesImg.svg'
+import ServicesMobile from '../../assets/servicesMobile.svg'
 import Coding from '../../assets/coding2.svg'
 import Design from '../../assets/design2.svg'
 import Socials from '../../assets/socials2.svg'
@@ -26,12 +28,26 @@ const data = [
 ]
 
 function Services() {
+
+    const [scrolling, setScrolling] = useState(false);
+      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    
+      useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
     return ( 
         <div className={styles.services}>
             <h1 className={styles.title}>Services</h1>
             <img src={Underline} className={styles.underline} />
             <div className={styles.servicesContainer}>
-                <img src={ServicesImg} className={styles.servicesImg} />
+                {isMobile ? (
+                    <img src={ServicesMobile} className={styles.servicesImg} />
+                ):(
+                    <img src={ServicesImg} className={styles.servicesImg} />
+                )}
                 <div className={styles.servicesCards}>
                     {data.map((item, key) => {
                         return (
