@@ -11,7 +11,7 @@ function Helper() {
       <Home/>
       <About/>
       <Services/>
-      <Portfolio/>
+      {/* <Portfolio/> */}
       {/* <Packages/> */}
     </>
   );

@@ -88,6 +88,9 @@
 }
 
 @media (max-width: 480px) {
+    .services {
+        background: white;
+    }
     .servicesImg {
         width: 65%;
     }
@@ -102,12 +105,12 @@
     .servicesCards {
         flex-direction: column;
         align-items: center;
-        height: 90vh;
-        top: 65%;
+        height: 95vh;
+        top: 63%;
     }
     .card {
         width: 70%;
-        height: 23vh;
+        height: 25vh;
         border-radius: 15px;
     }
     .icon {
@@ -122,6 +125,6 @@
         margin-top: 0%;
     }
     .card p {
-        font-size: 2.8vw;
+        font-size: 3.1vw;
     }
 }
