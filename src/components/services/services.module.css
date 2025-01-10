@@ -90,6 +90,7 @@
 @media (max-width: 480px) {
     .services {
         background: white;
+        height: 140vh;
     }
     .servicesImg {
         width: 65%;

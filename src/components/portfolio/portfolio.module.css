@@ -29,3 +29,17 @@
     top: 10%;
     width: 8%;
 }
+@media (max-width: 480px) {
+    .portfolio {
+        background: white;
+        height: 50vh;
+    }
+    .title {
+        font-size: 5vw;
+        width: 45%;
+        top: 10%;
+    }
+    .underline {
+        width: 20%;
+    }
+}

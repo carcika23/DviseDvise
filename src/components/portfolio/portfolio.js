@@ -13,6 +13,15 @@ import web4 from '../../assets/web4.svg'
 
 function Portfolio() {
 
+      const [scrolling, setScrolling] = useState(false);
+      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    
+      useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -24,6 +33,7 @@ function Portfolio() {
             breakpoint: 768, // Mobile
             settings: {
               slidesToShow: 1,
+              slidesToScroll: 1,
             },
           },
         ],
