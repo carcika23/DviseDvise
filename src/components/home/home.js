@@ -1,11 +1,12 @@
 import React, { Component} from 'react';
 import styles from './home.module.css'
-import background from '../../assets/landing2.svg'
+import background from '../../assets/Wave.svg'
 import ServerImg from '../../assets/serverImg.svg'
 import { useState, useEffect } from 'react';
-import LandingMobile from '../../assets/landingMobile.svg'
+import LandingMobile from '../../assets/WaveMobile.svg'
+import { useTranslation } from 'react-i18next';
 
-const welcomeText = 'We specialize in creating modern, responsive, and dynamic websites tailored to your needs. Whether you’re launching a new business, upgrading your online presence, or looking for innovative web solutions, we’re here to bring your vision to life. Explore our services and let us help you turn ideas into reality. Your digital success starts here!'
+const welcomeText = 'We build your entire digital world with expert web development, creative design, programming, and social media solutions to ensure your business thrives in the digital space.'
 
 function Home() {
 
@@ -17,24 +18,26 @@ function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <div className={styles.home}>
       <div className={styles.blur}></div>
       {isMobile ? (
          <img src={LandingMobile} className={styles.background} />
       ): (
-        <img src={background} className={styles.background} />
+        <div className={styles.background}></div>
       )}
       <div className={styles.left}>
         <div>
         {isMobile ? (
-            <h1>We're Building Your <h2>Future</h2></h1>
+            <h1>{t('welcome')}</h1>
         ): (
-          <h1>We're Building Your Future</h1>
+          <h1>{t('welcome')}</h1>
         )}
-        <p>{welcomeText}</p>
+        <p>{t('welcomeDescription')}</p>
         </div>
-        <button>Learn More</button>
+        <button>{t('learnMore')}</button>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ function Helper() {
       <About/>
       <Services/>
       <Portfolio/>
-      {/* <Packages/> */}
+      <Packages/>
     </>
   );
 }

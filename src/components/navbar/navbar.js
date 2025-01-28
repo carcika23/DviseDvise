@@ -6,11 +6,14 @@ import Login from '../../assets/login.svg'
 import Hamburger from '../../assets/hamburgerMenu.svg'
 import HamburgerScrolled from '../../assets/hamburgerScrolled.svg'
 import Login1 from '../../assets/loginIcon1.svg'
+import { useTranslation } from 'react-i18next';
 
 function Navbar() {
 
   const [scrolling, setScrolling] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -56,12 +59,12 @@ function Navbar() {
         <div className={`${styles.navbar} ${scrolling ? styles.navbarScrolled : ""}`}>
           <h1 className={`${styles.logo} ${scrolling ? styles.logoColored : ""}`}>Dvise</h1>
       <div className={styles.navbarItems}>
-        <Link>Home</Link>
-        <Link>About us</Link>
-        <Link>Services</Link>
-        <Link>Portfolio</Link>
-        <Link>Packages</Link>
-        <Link>Contact</Link>
+        <Link>{t('navHome')}</Link>
+        <Link>{t('navAbout')}</Link>
+        <Link>{t('navServices')}</Link>
+        <Link>{t('navPortfolio')}</Link>
+        <Link>{t('navPack')}</Link>
+        <Link>{t('navContact')}</Link>
       </div>
         <ChangeLanguage/>
         {scrolling ? (

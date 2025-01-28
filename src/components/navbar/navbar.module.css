@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: space-around;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(63, 63, 63, 0.05);
+    backdrop-filter: blur(5px);
 }
 .logo {
     font-family: "Inria Serif", serif;
@@ -25,10 +28,10 @@
     cursor: pointer;
 }
 .navbarItems {
-    width: 38%;
+    width: 43%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     color: white;
 }
 .navbarItems a {
