@@ -92,6 +92,13 @@
     color: #909090;
     font-size: 1.3vw;
 }
+html[data-lang="ge"] .card h1 {
+    position: relative;
+    margin-top: 5%;
+  }
+html[data-lang="ge"] .card p {
+    width: 95%;
+}
 @media (max-width: 480px) {
     .title {
         font-size: 5vw;
