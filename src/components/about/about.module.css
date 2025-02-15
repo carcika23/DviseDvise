@@ -114,6 +114,10 @@ html[data-lang="ge"] .card p {
     .description {
         width: 90%;
     }
+    html[data-lang="ge"] .description {
+        font-size: 4vw;
+        width: 85%;
+    }
     .cards {
         flex-direction: column;
         height: 55vh;

@@ -67,6 +67,9 @@
     color: #d6d6d6;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
+html[data-lang="ge"] .left h1 {
+    font-size: 3.5vw;
+}
 ::-webkit-scrollbar {
     width: 9px; /* Width of the scrollbar */
     height: 12px; /* Height of the scrollbar for horizontal scroll */
@@ -97,6 +100,9 @@
         font-size: 7vw;
         width: 100%;
     }
+    html[data-lang="ge"] .left h1 {
+        font-size: 6vw;
+    }
     .left div {
         width: 100%;
         margin-bottom: 25%;
@@ -111,7 +117,10 @@
     }
     .left p {
         font-size: 5vw;
-        opacity: 80%;
+        color: #cacaca;
+    }
+    html[data-lang="ge"] .left p {
+        font-size: 4vw;
     }
     .left button {
         width: 30%;
