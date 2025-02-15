@@ -165,4 +165,14 @@
   .planItem {
     font-size: 4vw;
   }
+  .title {
+    font-size: 5vw;
+    width: 45%;
+    top: 14%;
+  }
+  .underline {
+      width: 20%;
+      top: 14%;
+      position: relative;
+  }
 }

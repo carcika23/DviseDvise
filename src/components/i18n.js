@@ -42,7 +42,8 @@ const resources = {
       secpack1: "Medium - sized website, 5 page",
       secpack2: "Deliver within 1-2 months",
       thirdpack1: "Large - sized website, 10 page",
-      thirdpack2: "Deliver within 3-4 months"
+      thirdpack2: "Deliver within 3-4 months",
+      packages: "Packages"
     },
   },
   ge: {
@@ -85,7 +86,8 @@ const resources = {
       secpack1: "საშუალო ზომის საიტი, 5 გვერდი",
       secpack2: "მიწოდება 1-2 თვემდე",
       thirdpack1: "დიდი ზომის საიტი, 10 გვერდი",
-      thirdpack2: "მიწოდება 3-4 თვემდე"
+      thirdpack2: "მიწოდება 3-4 თვემდე",
+      packages: "პაკეტები"
     },
   },
 };

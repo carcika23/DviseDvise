@@ -90,6 +90,7 @@ html[data-lang="ge"] .left h1 {
 @media (max-width: 480px) {
     .background {
         width: 100%;
+        height: 100dvh;
     }
     .blur {
         backdrop-filter: blur(0px);
@@ -117,7 +118,7 @@ html[data-lang="ge"] .left h1 {
     }
     .left p {
         font-size: 5vw;
-        color: #cacaca;
+        color: #dadada;
     }
     html[data-lang="ge"] .left p {
         font-size: 4vw;

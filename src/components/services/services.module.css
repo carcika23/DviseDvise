@@ -134,11 +134,13 @@ html[data-lang="ge"] .card p {
     }
     html[data-lang="ge"] .card p {
         font-size: 3vw;
-        width: 95%;
+        width: 93%;
         margin-top: 5%;
     }
     html[data-lang="ge"] .card h1 {
-        
         margin-top: -5%;
+    }
+    html[data-lang="ge"] .card {
+        height: 27vh;
     }
 }

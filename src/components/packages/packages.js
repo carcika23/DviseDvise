@@ -65,7 +65,7 @@ function Packages() {
 
     return ( 
         <div className={styles.packagesDiv}>
-            <h1 className={styles.title}>Packages</h1>
+            <h1 className={styles.title}>{t("packages")}</h1>
             <img src={Underline} className={styles.underline} />
             <div className={styles.pricingContainer}>
       {data.map((plan, index) => (
