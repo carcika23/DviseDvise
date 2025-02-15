@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
 
+html {
+  font-family: var(--font-default);
+}
+
+html[data-lang="ge"] {
+  font-family: "Noto Sans Georgian", serif !important;
+}
+
+html[data-lang="fr"] {
+  font-family: var(--font-fr);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

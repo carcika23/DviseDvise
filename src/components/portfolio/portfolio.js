@@ -10,6 +10,7 @@ import web1 from '../../assets/web1.svg'
 import web2 from '../../assets/web2.svg'
 import web3 from '../../assets/web3.svg'
 import web4 from '../../assets/web4.svg'
+import { useTranslation } from 'react-i18next';
 
 function Portfolio() {
 
@@ -21,6 +22,9 @@ function Portfolio() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
       }, []);
+
+      const { t } = useTranslation();
+      
 
     const settings = {
         dots: true,
@@ -50,7 +54,7 @@ function Portfolio() {
 
     return ( 
         <div className={styles.portfolio}>
-            <h1 className={styles.title}>Portfolio</h1>
+            <h1 className={styles.title}>{t("portfolio")}</h1>
             <img src={Underline} className={styles.underline} />
 
             <div className="carousel-container">

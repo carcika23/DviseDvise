@@ -7,30 +7,34 @@ import ServicesMobile from '../../assets/servicesMobile.svg'
 import Coding from '../../assets/coding2.svg'
 import Design from '../../assets/design2.svg'
 import Socials from '../../assets/socials2.svg'
+import { useTranslation } from 'react-i18next';
 
-
-const data = [
-    {
-        name: 'Web/App Development',
-        description: 'We create custom websites and apps designed to meet your unique needs. With a focus on sleek design, seamless functionality, and user experience, we turn your ideas into powerful digital solutions',
-        img: Coding
-    },
-    {
-        name: 'Graphic Design',
-        description: 'We create stunning visuals with custom graphic and website design, including branding, logos, and marketing materials, tailored to enhance your brand’s identity, captivate audiences, and leave a lasting impression',
-        img: Design
-    },
-    {
-        name: 'Social Media Management',
-        description: 'We grow your brand with expert social media management by creating engaging content, building connections, analyzing performance, and delivering strategies to maximize your online impact',
-        img: Socials
-    },
-]
 
 function Services() {
 
     const [scrolling, setScrolling] = useState(false);
-      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const { t } = useTranslation();
+
+    const data = [
+        {
+            name: t("service1"),
+            description: t("service1desc"),
+            img: Coding
+        },
+        {
+            name: t("service2"),
+            description: t("service2desc"),
+            img: Design
+        },
+        {
+            name: t("service3"),
+            description: t("service3desc"),
+            img: Socials
+        },
+    ]
+      
     
       useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -40,7 +44,7 @@ function Services() {
 
     return ( 
         <div className={styles.services}>
-            <h1 className={styles.title}>Services</h1>
+            <h1 className={styles.title}>{t("servicesTitle")}</h1>
             <img src={Underline} className={styles.underline} />
             <div className={styles.servicesContainer}>
                 {isMobile ? (

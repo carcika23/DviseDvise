@@ -37,6 +37,10 @@ const ChangeLanguage = () => {
         };
     }, []);
 
+    useEffect(() => {
+        document.documentElement.setAttribute("data-lang", i18n.language);
+      }, [i18n.language]);
+
     const [scrolling, setScrolling] = useState(false);
 
     useEffect(() => {

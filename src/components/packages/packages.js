@@ -3,62 +3,66 @@ import styles from './packages.module.css'
 import PinkCheck from '../../assets/Check2.svg'
 import GrayCheck from '../../assets/Check1.svg'
 import Underline from '../../assets/underline.svg'
+import { useTranslation } from 'react-i18next';
 
-const data = [
+function Packages() {
+
+  const { t } = useTranslation();
+
+  const data = [
     {
       title: 'Basic',
       price: '1600 GEL',
       items: [
-        { name: 'Unique design for your website', img: PinkCheck },
-        { name: 'Informative basic website, one page', img: PinkCheck },
-        { name: 'Functional Slider', img: PinkCheck },
-        { name: 'Functional contact form', img: PinkCheck },
-        { name: 'Free Domain', img: PinkCheck },
-        { name: 'Deliver within 1-3 weeks', img: PinkCheck },
-        { name: 'Logo', img: GrayCheck },
-        { name: 'Banner', img: GrayCheck },
-        { name: 'Social media management', img: GrayCheck },
-        { name: 'Content management', img: GrayCheck },
-        { name: 'Copywriting', img: GrayCheck },
+        { name: t("fpack1"), img: PinkCheck },
+        { name: t("fpack2"), img: PinkCheck },
+        { name: t("fpack3"), img: PinkCheck },
+        { name: t("fpack4"), img: PinkCheck },
+        { name: t("fpack5"), img: PinkCheck },
+        { name: t("fpack6"), img: PinkCheck },
+        { name: t("fpack7"), img: GrayCheck },
+        { name: t("fpack8"), img: GrayCheck },
+        { name: t("fpack9"), img: GrayCheck },
+        { name: t("fpack10"), img: GrayCheck },
+        { name: t("fpack11"), img: GrayCheck },
       ],
     },
     {
       title: 'Standart',
       price: '3800 GEL',
       items: [
-        { name: 'Unique design for your website', img: PinkCheck },
-        { name: 'Informative basic website, one page', img: PinkCheck },
-        { name: 'Functional Slider', img: PinkCheck },
-        { name: 'Functional contact form', img: PinkCheck },
-        { name: 'Free Domain', img: PinkCheck },
-        { name: 'Deliver within 1-3 weeks', img: PinkCheck },
-        { name: 'Logo', img: PinkCheck },
-        { name: 'Banner', img: PinkCheck },
-        { name: 'Copywriting', img: PinkCheck },
-        { name: 'Content management', img: GrayCheck },
-        { name: 'Social media management', img: GrayCheck },
+        { name: t("fpack1"), img: PinkCheck },
+        { name: t("secpack1"), img: PinkCheck },
+        { name: t("fpack3"), img: PinkCheck },
+        { name: t("fpack4"), img: PinkCheck },
+        { name: t("fpack5"), img: PinkCheck },
+        { name: t("secpack2"), img: PinkCheck },
+        { name: t("fpack7"), img: PinkCheck },
+        { name: t("fpack8"), img: PinkCheck },
+        { name: t("fpack9"), img: PinkCheck },
+        { name: t("fpack10"), img: GrayCheck },
+        { name: t("fpack11"), img: GrayCheck },
       ],
     },
     {
       title: 'Premium',
       price: '6500 GEL',
       items: [
-        { name: 'Unique design for your website', img: PinkCheck },
-        { name: 'Informative basic website, one page', img: PinkCheck },
-        { name: 'Functional Slider', img: PinkCheck },
-        { name: 'Functional contact form', img: PinkCheck },
-        { name: 'Free Domain', img: PinkCheck },
-        { name: 'Deliver within 1-3 weeks', img: PinkCheck },
-        { name: 'Logo', img: PinkCheck },
-        { name: 'Banner', img: PinkCheck },
-        { name: 'Social media management', img: PinkCheck },
-        { name: 'Content management', img: PinkCheck },
-        { name: 'Copywriting', img: PinkCheck },
+        { name: t("fpack1"), img: PinkCheck },
+        { name: t("thirdpack1"), img: PinkCheck },
+        { name: t("fpack3"), img: PinkCheck },
+        { name: t("fpack4"), img: PinkCheck },
+        { name: t("fpack5"), img: PinkCheck },
+        { name: t("thirdpack2"), img: PinkCheck },
+        { name: t("fpack7"), img: PinkCheck },
+        { name: t("fpack8"), img: PinkCheck },
+        { name: t("fpack9"), img: PinkCheck },
+        { name: t("fpack10"), img: PinkCheck },
+        { name: t("fpack11"), img: PinkCheck },
       ],
     },
   ];
 
-function Packages() {
     return ( 
         <div className={styles.packagesDiv}>
             <h1 className={styles.title}>Packages</h1>
