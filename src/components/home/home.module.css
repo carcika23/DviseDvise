@@ -90,11 +90,10 @@ html[data-lang="ge"] .left h1 {
 @media (max-width: 480px) {
     .background {
         width: 100%;
-        height: 100dvh;
     }
     .blur {
         backdrop-filter: blur(0px);
-        height: 100dvh;
+        height: 102vh;
         background: rgba(0, 0, 0, 0.2);
     }
     .left h1 {
