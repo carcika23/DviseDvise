@@ -3,7 +3,7 @@ import styles from './home.module.css'
 import background from '../../assets/Wave.svg'
 import ServerImg from '../../assets/serverImg.svg'
 import { useState, useEffect } from 'react';
-import LandingMobile from '../../assets/WaveMobile.svg'
+import LandingMobile from '../../assets/homebg.svg'
 import { useTranslation } from 'react-i18next';
 
 const welcomeText = 'We build your entire digital world with expert web development, creative design, programming, and social media solutions to ensure your business thrives in the digital space.'

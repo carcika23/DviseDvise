@@ -4,6 +4,7 @@ import About from '../about/about';
 import Portfolio from '../portfolio/portfolio';
 import Services from '../services/services';
 import Packages from '../packages/packages';
+import Footer from '../footer/footer';
 
 function Helper() {
   return (
@@ -13,6 +14,7 @@ function Helper() {
       <Services/>
       <Portfolio/>
       <Packages/>
+      <Footer/>
     </>
   );
 }

@@ -156,6 +156,9 @@
     color: #F4A261;
   }
 @media (max-width: 480px) {
+  .packagesDiv {
+    height: 320vh;
+  }
   .pricingContainer {
     flex-direction: column;
   }

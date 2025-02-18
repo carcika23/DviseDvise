@@ -94,7 +94,7 @@ html[data-lang="ge"] .left h1 {
     .blur {
         backdrop-filter: blur(0px);
         height: 102vh;
-        background: rgba(0, 0, 0, 0.2);
+        display: none;
     }
     .left h1 {
         font-size: 7vw;
