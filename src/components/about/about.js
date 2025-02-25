@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from './about.module.css'
 import Underline from '../../assets/underline.svg'
-import Support from '../../assets/image8.svg'
-import Domain from '../../assets/image9.svg'
+import Support from '../../assets/image8.webp'
+import Domain from '../../assets/image9.webp'
 import { useTranslation } from 'react-i18next';
 
 function About() {

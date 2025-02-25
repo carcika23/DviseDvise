@@ -1,17 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Navbar from './components/navbar/navbar';
-import Helper from './components/helper/helper';
-import './components/i18n'; // Import i18n configuration
-
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Navbar from "./components/navbar/navbar";
+import Helper from "./components/helper/helper";
+import "./components/i18n"; // Import i18n configuration
+import LoadingScreen from "./components/loading/loadingScreen"; // Import your loading component
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setTimeout(() => setIsLoading(false), 500); // Smooth transition
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
   return (
     <React.StrictMode>
-      <Navbar/>
-      <Helper/>
+      {isLoading ? <LoadingScreen /> : (
+        <>
+          <Navbar />
+          <Helper />
+        </>
+      )}
     </React.StrictMode>
   );
 }

@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import styles from './portfolio.module.css'
 import Underline from '../../assets/underline.svg'
 import { Carousel, Card, Button, Modal } from 'antd';
 import './slides.css'
 import Slider from "react-slick";
-import Open from '../../assets/Open.svg'
-import Performators from '../../assets/performators.svg'
-import web1 from '../../assets/web1.svg'
-import web2 from '../../assets/web2.svg'
-import web3 from '../../assets/web3.svg'
-import web4 from '../../assets/web4.svg'
+import Open from '../../assets/Open.webp'
+import Performators from '../../assets/performators.webp'
+import web1 from '../../assets/web1.webp'
+import web2 from '../../assets/web2.webp'
+import web3 from '../../assets/web3.webp'
+import web4 from '../../assets/web4.webp'
 import { useTranslation } from 'react-i18next';
+
 
 function Portfolio() {
 
@@ -26,7 +27,7 @@ function Portfolio() {
       const { t } = useTranslation();
       
 
-    const settings = {
+    const settings = useMemo(() => ({
         dots: true,
         infinite: true,
         speed: 500,
@@ -41,7 +42,7 @@ function Portfolio() {
             },
           },
         ],
-      };
+      }), []);
     
       const cards = [
         { id: 1, link: 'tuclothing.sainsburys.co.uk', img: web2, open: Open },

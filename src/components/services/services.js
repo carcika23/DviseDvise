@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { useState, useEffect } from 'react';
 import styles from './services.module.css'
 import Underline from '../../assets/underline.svg'
-import ServicesImg from '../../assets/servicesImg.svg'
-import ServicesMobile from '../../assets/servicesMobile.svg'
+import ServicesImg from '../../assets/servicesImg.webp'
+import ServicesMobile from '../../assets/servicesMobile.webp'
 import Coding from '../../assets/coding2.svg'
 import Design from '../../assets/design2.svg'
 import Socials from '../../assets/socials2.svg'

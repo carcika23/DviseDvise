@@ -1,10 +1,9 @@
 import React, { Component} from 'react';
 import styles from './home.module.css'
-import background from '../../assets/Wave.svg'
-import ServerImg from '../../assets/serverImg.svg'
 import { useState, useEffect } from 'react';
-import LandingMobile from '../../assets/homebg.svg'
+import LandingMobile from '../../assets/homebg.webp'
 import { useTranslation } from 'react-i18next';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const welcomeText = 'We build your entire digital world with expert web development, creative design, programming, and social media solutions to ensure your business thrives in the digital space.'
 
@@ -24,7 +23,7 @@ function Home() {
     <div className={styles.home}>
       <div className={styles.blur}></div>
       {isMobile ? (
-         <img src={LandingMobile} className={styles.background} />
+         <LazyLoadImage src={LandingMobile} height="auto" effect='blur' className={styles.background} />
       ): (
         <div className={styles.background}></div>
       )}

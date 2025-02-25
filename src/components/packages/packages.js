@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './packages.module.css'
-import PinkCheck from '../../assets/Check2.svg'
-import GrayCheck from '../../assets/Check1.svg'
+import PinkCheck from '../../assets/Check2.webp'
+import GrayCheck from '../../assets/Check1.webp'
 import Underline from '../../assets/underline.svg'
 import { useTranslation } from 'react-i18next';
 
@@ -12,7 +12,7 @@ function Packages() {
   const data = [
     {
       title: 'Basic',
-      price: '1600 GEL',
+      price: '2100 GEL',
       items: [
         { name: t("fpack1"), img: PinkCheck },
         { name: t("fpack2"), img: PinkCheck },
@@ -29,7 +29,7 @@ function Packages() {
     },
     {
       title: 'Standart',
-      price: '3800 GEL',
+      price: '5200 GEL',
       items: [
         { name: t("fpack1"), img: PinkCheck },
         { name: t("secpack1"), img: PinkCheck },
@@ -46,7 +46,7 @@ function Packages() {
     },
     {
       title: 'Premium',
-      price: '6500 GEL',
+      price: '8900+ GEL',
       items: [
         { name: t("fpack1"), img: PinkCheck },
         { name: t("thirdpack1"), img: PinkCheck },
